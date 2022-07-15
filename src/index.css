@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Noto Sans Mono', monospace;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .game {
@@ -36,9 +37,6 @@ body {
 
 .dashboard {
   background-color: rgb(255, 255, 255);
-  height: 100vh;
-  display: grid;
-  place-content: center;
 }
 
 .button {
@@ -47,7 +45,9 @@ body {
   color: black;
   cursor: pointer;
   padding: 8px;
-  border-bottom: 1px solid rgb(230, 230, 230);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-top: 8px;
+  border-radius: 8px;
 }
 
 .button:hover {
@@ -68,20 +68,29 @@ body {
 }
 
 .navbar {
-  background-color: transparent;
-  height: 100vh;
-  width: 100px;
-  padding: 12px 12px;
-  font-size: 0.5em;
-  position: absolute;
-  flex-direction: column;
-  border-right: 1px solid rgb(230, 230, 230);
   background-color: white;
-  z-index: 999;
-  justify-content: center;
+  width: 100vw;
+  height: 60px;
+  padding: 24px 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.navbar a {
-  font-size: 1.5em;
+.inner {
+  height: calc(100vh - 60px);
+  display: grid;
+  place-content: center;
+}
+
+.highlighted {
+  border: 3px solid white;
+}
+
+.photoURL {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
 }
